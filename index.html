@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字构建师 - 组合文字构建意义</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 开始界面 -->
+    <div id="startScreen" class="screen active">
+        <div class="container">
+            <h1 class="title">文字构建师</h1>
+            <p class="subtitle">通过组合文字，构建属于你的意义世界</p>
+            
+            <div class="api-config">
+                <h2>API配置</h2>
+                <div class="api-selector">
+                    <label>
+                        <input type="radio" name="apiType" value="deepseek" checked>
+                        <span>DeepSeek API</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="apiType" value="dashscope">
+                        <span>阿里百炼 (DashScope)</span>
+                    </label>
+                </div>
+                
+                <div class="input-group">
+                    <label for="apiKey">API Key:</label>
+                    <input type="password" id="apiKey" placeholder="请输入您的API Key">
+                </div>
+                
+                <div class="input-group">
+                    <label for="apiUrl">API URL (可选，DeepSeek默认):</label>
+                    <input type="text" id="apiUrl" placeholder="https://api.deepseek.com/v1/chat/completions">
+                </div>
+                
+                <button id="startBtn" class="btn btn-primary">开始游戏</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 游戏主界面 -->
+    <div id="gameScreen" class="screen">
+        <div class="container">
+            <header class="game-header">
+                <h1>文字构建师</h1>
+                <button id="backBtn" class="btn btn-secondary">返回设置</button>
+            </header>
+
+            <div class="game-content">
+                <!-- 左侧：输入区域 -->
+                <div class="input-section">
+                    <h2>输入关键词</h2>
+                    <p class="hint">输入多个词语，用空格或逗号分隔，AI将根据这些词语构建完整的故事</p>
+                    
+                    <div class="tag-input-container">
+                        <div id="tagContainer" class="tag-container"></div>
+                        <input type="text" id="wordInput" placeholder="输入词语后按回车或点击添加" class="tag-input">
+                    </div>
+                    
+                    <div class="word-list">
+                        <div id="wordTags" class="tags"></div>
+                    </div>
+                    
+                    <div class="controls">
+                        <button id="generateBtn" class="btn btn-primary">生成故事</button>
+                        <button id="clearBtn" class="btn btn-secondary">清空词语</button>
+                    </div>
+                </div>
+
+                <!-- 右侧：输出区域 -->
+                <div class="output-section">
+                    <h2>生成的故事</h2>
+                    <div id="storyContainer" class="story-container">
+                        <div class="placeholder">
+                            <p>输入关键词后，点击"生成故事"按钮</p>
+                            <p>AI将根据您输入的词语组合，构建一个完整的故事</p>
+                        </div>
+                    </div>
+                    
+                    <div class="story-actions">
+                        <button id="saveBtn" class="btn btn-secondary">保存故事</button>
+                        <button id="regenerateBtn" class="btn btn-primary">重新生成</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 加载提示 -->
+            <div id="loadingOverlay" class="loading-overlay hidden">
+                <div class="spinner"></div>
+                <p>AI正在思考中...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
