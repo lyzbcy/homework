@@ -6,7 +6,7 @@
 
 ```
 homework/
-├── Sophomore-Year/              # 大二学年
+├── Sophomore-Year/              # 大三学年
 │   └── Interactive-Media-Technology/  # 互动媒体技术
 │       └── W12-5/              # 第12周第5次作业
 │           ├── index.html
