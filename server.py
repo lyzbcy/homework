@@ -68,25 +68,36 @@ async def chat(request: ChatRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/graph/sample", response_model=GraphData)
-async def get_sample_graph():
+async def get_sample_graph(name: Optional[str] = None):
     """
-    Returns a sample subgraph for visualization. 
-    In a real scenario, this could be dynamic based on the last query.
-    For now, we return a static sample or fetch a small random subgraph from Neo4j.
+    Returns a subgraph for visualization. 
+    If 'name' is provided, searches for related nodes.
+    Otherwise, returns a random sample.
     """
     if not chatbot:
          raise HTTPException(status_code=503, detail="ChatBot service unavailable")
 
     try:
-        # Fetch a small sample from Neo4j directly using the chatbot's graph connection
-        # We access the internal graph object from the searcher
         graph = chatbot.searcher.g
         
-        query = """
-        MATCH (n)-[r]->(m)
-        RETURN n, r, m
-        LIMIT 30
-        """
+        if name:
+            # Context-aware search: Find nodes matching the name and their neighbors
+            query = f"""
+            MATCH (n)-[r]-(m)
+            WHERE n.name CONTAINS '{name}' OR m.name CONTAINS '{name}'
+            RETURN n, r, m
+            LIMIT 30
+            """
+        else:
+            # Random sample: Use rand() to get diverse nodes
+            query = """
+            MATCH (n)-[r]->(m)
+            WITH n, r, m, rand() AS random
+            ORDER BY random
+            LIMIT 30
+            RETURN n, r, m
+            """
+            
         data = graph.run(query).data()
         
         nodes = {}
@@ -97,7 +108,7 @@ async def get_sample_graph():
             m = record['m']
             r = record['r']
             
-            n_id = str(n.identity) # Use Neo4j ID or a unique property like name
+            n_id = str(n.identity)
             m_id = str(m.identity)
             
             # Use 'name' if available, otherwise fallback

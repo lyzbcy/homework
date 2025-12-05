@@ -12,9 +12,12 @@ export const chatWithBot = async (question) => {
     }
 };
 
-export const getGraphData = async () => {
+export const getGraphData = async (name = null) => {
     try {
-        const response = await axios.get(`${API_BASE_URL}/graph/sample`);
+        const url = name
+            ? `${API_BASE_URL}/graph/sample?name=${encodeURIComponent(name)}`
+            : `${API_BASE_URL}/graph/sample`;
+        const response = await axios.get(url);
         return response.data;
     } catch (error) {
         console.error("Error fetching graph data:", error);
