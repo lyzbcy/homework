@@ -1,0 +1,8 @@
+py2neo>=2021.2.3
+pyahocorasick>=2.0.0
+pymongo>=4.0.0
+lxml>=4.6.0
+PyQt5>=5.15.0
+matplotlib>=3.5.0
+networkx>=2.6.0
+
