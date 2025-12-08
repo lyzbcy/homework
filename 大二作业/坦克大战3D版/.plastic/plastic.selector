@@ -1,0 +1,4 @@
+repository "沙漠坦克@lyzbcy@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"

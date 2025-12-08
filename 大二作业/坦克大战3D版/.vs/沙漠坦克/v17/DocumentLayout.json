@@ -1,0 +1,72 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Unity_test\\\u6C99\u6F20\u5766\u514B\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{82E83736-4A8F-4EAD-BF81-14A5E7967E8E}|Assembly-CSharp.csproj|d:\\unity_test\\\u6C99\u6F20\u5766\u514B\\assets\\scripts\\start\\startgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82E83736-4A8F-4EAD-BF81-14A5E7967E8E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\start\\startgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82E83736-4A8F-4EAD-BF81-14A5E7967E8E}|Assembly-CSharp.csproj|D:\\Unity_test\\\u6C99\u6F20\u5766\u514B\\assets\\scripts\\main\\menulist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82E83736-4A8F-4EAD-BF81-14A5E7967E8E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\main\\menulist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82E83736-4A8F-4EAD-BF81-14A5E7967E8E}|Assembly-CSharp.csproj|D:\\Unity_test\\\u6C99\u6F20\u5766\u514B\\assets\\scripts\\start\\menuparallax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82E83736-4A8F-4EAD-BF81-14A5E7967E8E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\start\\menuparallax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MenuParallax.cs",
+              "DocumentMoniker": "D:\\Unity_test\\\u6C99\u6F20\u5766\u514B\\Assets\\Scripts\\Start\\MenuParallax.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Start\\MenuParallax.cs",
+              "ToolTip": "D:\\Unity_test\\\u6C99\u6F20\u5766\u514B\\Assets\\Scripts\\Start\\MenuParallax.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Start\\MenuParallax.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAA4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T17:26:00.135Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StartGame.cs",
+              "DocumentMoniker": "D:\\Unity_test\\\u6C99\u6F20\u5766\u514B\\Assets\\Scripts\\Start\\StartGame.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Start\\StartGame.cs",
+              "ToolTip": "D:\\Unity_test\\\u6C99\u6F20\u5766\u514B\\Assets\\Scripts\\Start\\StartGame.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Start\\StartGame.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwBAAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T20:51:39.671Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "menulist.cs",
+              "DocumentMoniker": "D:\\Unity_test\\\u6C99\u6F20\u5766\u514B\\Assets\\Scripts\\Main\\menulist.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Main\\menulist.cs",
+              "ToolTip": "D:\\Unity_test\\\u6C99\u6F20\u5766\u514B\\Assets\\Scripts\\Main\\menulist.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Main\\menulist.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwDMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-01T20:17:15.919Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
